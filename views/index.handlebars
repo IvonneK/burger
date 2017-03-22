@@ -2,7 +2,42 @@
 
 <h2>Awesome City Burgers!</h2>
 <ul>
-  <li>{{this.burger_name}}
-  </li>
+	{{#each burgers}}
+		{{#unless this.devoured}}
+			<li>
+				{{this.burger_name}}
+				<form action="/{{this.id}}?_method=PUT" method="POST">
+					<input type="hidden" name="devoured" value="true">
+					<button type="submit">Chow Time!</button>
+				</form>
+  			</li>
+  		{{/unless}}
+  	{{/each}}
 </ul>
 
+<ul>
+	{{#each burgers}}
+		{{#if this.devoured}}
+			<li>
+				{{this.burger_name}}
+				<form action="/{{this.id}}?_method=PUT" method="POST">
+					<input type="hidden" name="devoured" value="false">
+					<button type="submit">Available to eat!</button>
+  				</form>
+  			</li>
+
+  		{{/if}}
+  	{{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-update-form" action="/" method="POST">
+
+	<div class="form-group">
+		<label for="burge">Devour?</label><br>
+		<input type="radio" name="devoured" value="1" checked>Devour!<br>
+		<input type="radio" name="devoured" value="0">Ready to Eat!
+	</div>
+
+	<button type="submit">Add Burger</button>
+</form
