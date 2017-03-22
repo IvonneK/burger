@@ -1,6 +1,42 @@
-<h1>Yummy Burgers!</h1>
+<div class="container">
+	<p class="text-center">
+		<img src="./assets/img/burger1.png" alt='yummy burger'>
+	</p>
 
-<h2>Awesome City Burgers!</h2>
+	<h2 class="text-center">Eat-Da-Burger!!!</h2>
+ </div>
+<hr>
+<div class="container">
+<div class="row">
+  	<div class="col-md-6">Column1
+		<form>
+			<div class="form-group">
+				<ul>
+					{{#each burgers}}
+						{{#unless this.devoured}}
+							<li>
+								{{this.burger_name}}
+								<form class="list-inline" action="/{{this.id}}?_method=PUT" method="POST">
+									<input type="hidden" name="devoured" value="true">
+									<button type="submit" class="btn btn-primary btn-sm">Chow Time!</button>
+								</form>
+
+							</li>
+						{{/unless}}
+	  				{{/each}}
+	  			</ul>
+		  	</div>
+		</form>
+	</div>
+  	<div class="col-md-6 move-right">Column3</div>
+</div>
+</div>
+
+
+
+
+
+
 <ul>
 	{{#each burgers}}
 		{{#unless this.devoured}}
@@ -22,7 +58,7 @@
 				{{this.burger_name}}
 				<form action="/{{this.id}}?_method=PUT" method="POST">
 					<input type="hidden" name="devoured" value="false">
-					<button type="submit">Available to eat!</button>
+					<button type="submit">Yum, It was delicious!</button>
   				</form>
   			</li>
 
@@ -34,10 +70,16 @@
 <form class="create-update-form" action="/" method="POST">
 
 	<div class="form-group">
-		<label for="burge">Devour?</label><br>
-		<input type="radio" name="devoured" value="1" checked>Devour!<br>
-		<input type="radio" name="devoured" value="0">Ready to Eat!
+		<label for="burge">Name-da-burger?</label><br>
+		<input type="text" name="burger_name" placeholder="Name-da-burger!"<br>
 	</div>
 
 	<button type="submit">Add Burger</button>
-</form
+</form>
+
+<!-- script and spcript links below -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	</script>
