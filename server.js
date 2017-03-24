@@ -34,6 +34,9 @@ app.listen(port);
 
 console.log("connected as id " + port);
 
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
 
 
 
