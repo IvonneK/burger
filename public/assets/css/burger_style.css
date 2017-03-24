@@ -137,4 +137,9 @@ li {
  color: #666666 ;
 }
 
+#clear-radius {
+  border-radius: 0;
+  color: #ffffff;
+}
+
 

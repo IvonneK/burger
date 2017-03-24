@@ -1,8 +1,6 @@
 // Ivonne.Komis
 // Burger app 
 
-console.log("server.js");
-// 
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
@@ -30,9 +28,8 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(port, function() {
-    console.log('Our app is running on http://localhost:' + port);
-});
+
+module.exports = app;
 
 
 
