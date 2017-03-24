@@ -12,12 +12,22 @@ img {
 }
 
 ul {
+    display:inline-block;  
     list-style: none !important;
     list-style-type: none !important;
+}
+
+li.devoured-no {
+    width: 780px;
+    height: 439px;
+    list-style-image: url(‘burger1.png’);
 
 }
 
-
+li.line-up-button {
+    display: inline-block;
+    padding: 5px;
+}
 
 .move-left{
     width: 100px;
