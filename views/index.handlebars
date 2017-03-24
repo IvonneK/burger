@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="/assets/img/burger.png" style="width:70px; height:50px" alt="">
+                    <img src="/assets/img/burger.png" id="nav-burger" alt="nav Burger">
                 </a>
             </div>
             
@@ -45,9 +45,22 @@
 
 
 <div class="container text-center">
+
 	<div>
-		<img src="./assets/img/burger1.png" alt='yummy burger'>
+		<img src="./assets/img/burger1.png" id="main-burger" alt='yummy burger'>
 		<h2 class="text-center">Eat-Da-Burger!!!</h2>
+
+		<h2>Add a Burger</h2>
+		<form class="create-update-form" action="/" method="POST">
+			<div class="form-group">
+				<label for="burge">Name:</label>
+				<input type="text" name="burger_name" placeholder="Name-da-burger!"<br>
+				<button type="submit">Add Burger</button>
+			</div>
+		</form>
+
+
+
 	</div>		
 	<div class="row">
 	  	<div class="col-md-6 col-sm-6 col-xs-6">
@@ -89,14 +102,7 @@
 
 
 
-<h2>Add a Burger</h2>
-<form class="create-update-form" action="/" method="POST">
-	<div class="form-group">
-		<label for="burge">Name:</label>
-		<input type="text" name="burger_name" placeholder="Name-da-burger!"<br>
-		<button type="submit">Add Burger</button>
-	</div>
-</form>
+
 
 <!-- script and spcript links below -->
 		<script src="https://code.jquery.com/jquery.js"></script>
