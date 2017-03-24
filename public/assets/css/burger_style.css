@@ -1,61 +1,85 @@
 body {
-	background-color: yellow;
-}
-
-img {
-	width:100px;
-	height:100px;
-}
-
-#burger-name {
-	width: 700px;
-}
-
-ul {
-    display:inline-block;  
-    list-style: none !important;
-    list-style-type: none !important;
-}
-
-li.devoured-no {
-    width: 780px;
-    height: 439px;
-    list-style-image: url(‘burger1.png’);
+	background-color: #ffa500;
+    font-family: 'Permanent Marker', cursive;
 
 }
 
-li.line-up-button {
-    display: inline-block;
-    padding: 5px;
-}
+.navbar-default {
+    /*background-color:#ffa500;*/
+    background-color: #000000;
+    background-image: none;
+    background-repeat: no-repeat;
+    height: 75px;
+    color: #ffffff;  
+ }
 
 #nav-burger {
     width:70px; 
     height:50px;
 }
 
-#main-burger {
-    margin-top: 50px;
+/* ======== ik carousel settings ========*/
+.carousel{
+    background: #000000;
+    margin-top: 90px;
 }
 
-.move-left{
-    width: 100px;
-    height: 100px;
-    background: red;
-    position: relative;
-    -webkit-animation: mymove 3s;  /* Safari 4.0 - 8.0 */
-    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
-    animation: mymove 3s;
-    animation-fill-mode: forwards;
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+    height: 300px;  
+    width: 400px;
+    margin-bottom: 20px;
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes mymove {
-    from {left: 0px;}
-    to {left: 200px;}
+.bs-example{
+    margin: 5px 5px;
 }
 
-@keyframes mymove {
-    from {left: 0px;}
-    to {left: 200px;}
+.carousel-container {
+    background-color: #000000;
 }
+/* ======= End carousel settings ======*/
+
+ul {
+    display:inline-block;  
+    list-style: none !important;
+    list-style-type: none !important;
+    color: #ffffff;
+
+}
+
+/* IK need to come back to this.....COULDN'T GET MY IMAGE TO DISPLAY
+ul.burger-bullet {
+list-style-image: url('/assets/img/burger.png');
+}
+*/
+li {
+    height: auto;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:20px;
+    font-size: 10px;
+    width:100%;
+    background-color:#000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* IE 6 */
+/** html #footer {
+  position:absolute;
+  top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}*/
+
+#footer_push {
+       clear: both;
+       height: 20px;
+}
+
