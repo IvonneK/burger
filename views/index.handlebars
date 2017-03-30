@@ -104,7 +104,7 @@
 			<ul class="burger-bullet"><h2>Choose a Burger</h2>
 				{{#each burgers}}
 					{{#unless this.devoured}}
-						<li class"line-up-button">
+						<li class="line-up-button">
 							<h4>{{this.burger_name}}</h4>
 							<form action="/{{this.id}}?_method=PUT" method="POST">
 								<input type="hidden" name="devoured" value="true">

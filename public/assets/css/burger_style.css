@@ -48,11 +48,7 @@ ul {
 
 }
 
-/* IK need to come back to this.....COULDN'T GET MY IMAGE TO DISPLAY
-ul.burger-bullet {
-list-style-image: url('/assets/img/burger.png');
-}
-*/
+
 li {
     height: auto;
     color: #000000;
